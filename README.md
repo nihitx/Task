@@ -76,8 +76,6 @@ country: "Finland"
 ### Code cleanliness
 Normally I use controller functions with `_` and module functions with `camel case`.
 
-### !Important
-For some reason atom + github is messing up the code indentation, not sure why some of the code has huge tabs spaces on github.
 
 ### Author
 **MASNAD**
