@@ -32,15 +32,20 @@ CREATE TABLE `garage` (
  ) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARACTER SET utf8;
 ```
 *`UUNIQUE INDEX name` since it is more likely to always have a unique name. I wanted to add country but I did not feel that the <order by> would be any quicker in that way.
- And anothe reason is that since every index added makes inserts and updates slower.
+ And another reason is that since every index added makes inserts and updates slower.
+
 *`SPATIAL INDEX point` This is something new I learned while doing the task, looking at how to calculate the closest location from a user given point ( FUN!)
+
 *`UTF8` since latin1 is old school.
 
 ### PHP TASK
 
 `Main controller` has all the functionality that calls the garage table with given inputs.
+
 `Main model` has all model functionality to fetch all data from the database.
+
 `SQL Query` writing sql query instead of codeigniter function is much more easy to me hence its been coded that way.  All query have basic sql injection protection using query binding.
+
 Here is an example.
 ```
 $query = '
@@ -50,6 +55,7 @@ $query = '
 $query = $this->db->query($query, array($country));
 ```
 `Repeating functions` have been converted to one function.
+
 ` Library ` Since I was playing with MYSQL SPATIAL and still did not grasp the full understanding of it. So I created a library to sort out the point from the STD array and output a pure json. Would be great to know a better way for it since it looks very interesting!
 
 **Current Json output**
