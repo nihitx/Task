@@ -59,18 +59,32 @@ $query = $this->db->query($query, array($country));
 ` Library ` Since I was playing with MYSQL SPATIAL and still did not grasp the full understanding of it. So I created a library to sort out the point from the STD array and output a pure json since direct get from mysql was returning �#�N@�. Would be great to know a better way for it afterwards.
 
 **Current Json output**
+For /get_all_garage_by_cordinates
 ```
-{
-name: "Unknown",
-garage_owner: "AutoPark",
-hourly_price: "3.00",
-currency: "€",
-contact_email: "testemail@testautopark.fi",
-garage_id: "14",
-owner_id: "3",
-point: "60.164449966455 24.938178168201",
-country: "Finland"
-},
+[
+    {
+        name: "Q-Park1",
+        garage_owner: "AutoPark",
+        hourly_price: "2.00",
+        currency: "€",
+        contact_email: "testemail@testautopark.fi",
+        garage_id: "17",
+        owner_id: "6",
+        point: "60.168673901488 24.930162952045",
+        country: "Finland"
+    },
+    {
+        name: "Masnad",
+        garage_owner: "AutoPark",
+        hourly_price: "2.00",
+        currency: "€",
+        contact_email: "testemail@testautopark.fi",
+        garage_id: "18",
+        owner_id: "7",
+        point: "60.168673901488 24.930162952045",
+        country: "Bangladesh"
+    }
+]
 ```
 
 ### Code cleanliness
