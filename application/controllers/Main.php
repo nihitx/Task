@@ -11,11 +11,32 @@ class Main extends CI_Controller {
         $this->load->model("Main_model");
         /* Loading point_converter library since adding the code here is messy */
         $this->load->library('point_converter');
+        /* since I am not using auth token - this is the easiest solution */
+        header('Access-Control-Allow-Origin: *');
     }
 
     /* Will be changed later */
     public function index(){
         $this->load->view('welcome_message');
+    }
+    
+    public function get_gerage_information($number){
+        switch ($number) {
+        case "1":
+            return $this->get_all_garage();
+            break;
+        case "2":
+            return $this->get_all_garage_by_garage_owner();
+            break;
+        case "3":
+            return $this->get_all_garage_by_country();
+            break;
+        case "4":
+            return $this->get_all_garage_by_cordinates();
+            break;
+        default:
+            return $this->json_out_put("Number not found");
+}
     }
 
      /**
