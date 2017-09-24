@@ -1,7 +1,7 @@
 function AppViewModel() {
     
     var self = this;
-    self.title_bar = ko.observable('Get all Garage');
+    self.title_bar = ko.observable(null);
     self.json_string = ko.observable(null);
 
     self.callBackEnd = function (callNumber) {
