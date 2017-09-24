@@ -2,3 +2,4 @@ user_guide
 vendor
 .DS_Store
 .editorconfig
+/nbproject/private/

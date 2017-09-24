@@ -56,7 +56,7 @@ $query = $this->db->query($query, array($country));
 ```
 `Repeating functions` have been converted to one function.
 
-` Library ` Since I was playing with MYSQL SPATIAL and still did not grasp the full understanding of it. So I created a library to sort out the point from the STD array and output a pure json. Would be great to know a better way for it since it looks very interesting!
+` Library ` Since I was playing with MYSQL SPATIAL and still did not grasp the full understanding of it. So I created a library to sort out the point from the STD array and output a pure json since direct get from mysql was returning �#�N@�. Would be great to know a better way for it afterwards.
 
 **Current Json output**
 ```
@@ -76,8 +76,6 @@ country: "Finland"
 ### Code cleanliness
 Normally I use controller functions with `_` and module functions with `camel case`.
 
-### !Important
-For some reason atom + github is messing up the code indentation, not sure why some of the code has huge tabs spaces on github.
 
 ### Author
 **MASNAD**
