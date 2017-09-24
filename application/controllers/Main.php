@@ -10,7 +10,7 @@ class Main extends CI_Controller {
         */
         $this->load->model("Main_model");
         /* Loading point_converter library since adding the code here is messy */
-        $this->load->library('point_converter');
+        $this->load->library('Point_converter');
     }
 
     /* Will be changed later */
@@ -25,7 +25,7 @@ class Main extends CI_Controller {
      */
     public function get_all_garage(){
         $all_garage = $this->Main_model->getAllGarage();
-        $all_garage = $this->point_converter->convert_point_to_text($all_garage);
+        $all_garage = $this->Point_converter->convert_point_to_text($all_garage);
         $all_garage = json_decode(json_encode($all_garage), true);
         $this->json_out_put($all_garage);
     }
@@ -38,7 +38,7 @@ class Main extends CI_Controller {
     public function get_all_garage_by_garage_owner($owner = 'Fitnesstukku'){
         
         $all_garage_owner = $this->Main_model->getAllGarageOwner($owner);
-        $all_garage_owner = $this->point_converter->convert_point_to_text($all_garage_owner);
+        $all_garage_owner = $this->Point_converter->convert_point_to_text($all_garage_owner);
         $all_garage_owner = json_decode(json_encode($all_garage_owner), true);
         $this->json_out_put($all_garage_owner);
     }
@@ -51,7 +51,7 @@ class Main extends CI_Controller {
     public function get_all_garage_by_country($country = 'Finland'){
 
         $all_garage_by_country = $this->Main_model->getAllGarageByCountry($country);
-        $all_garage_by_country = $this->point_converter->convert_point_to_text($all_garage_by_country);
+        $all_garage_by_country = $this->Point_converter->convert_point_to_text($all_garage_by_country);
         $all_garage_by_country = json_decode(json_encode($all_garage_by_country), true);
         $this->json_out_put($all_garage_by_country);
     }
@@ -66,7 +66,7 @@ class Main extends CI_Controller {
         $lat_long = explode(' ', $cordinates);
         $lat = $lat_long[0]; $long = $lat_long[1];
         $all_garage_by_cordinates = $this->Main_model->getAllGarageByCordinates($lat,$long);
-        $all_garage_by_cordinates = $this->point_converter->convert_point_to_text($all_garage_by_cordinates);
+        $all_garage_by_cordinates = $this->Point_converter->convert_point_to_text($all_garage_by_cordinates);
         $all_garage_by_cordinates = json_decode(json_encode($all_garage_by_cordinates), true);
         $this->json_out_put($all_garage_by_cordinates);
     }

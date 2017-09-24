@@ -58,7 +58,7 @@ $autoload['packages'] = array();
 |
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
-$autoload['libraries'] = array('database','point_converter');
+$autoload['libraries'] = array('database','Point_converter');
 
 /*
 | -------------------------------------------------------------------
