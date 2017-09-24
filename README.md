@@ -38,6 +38,8 @@ CREATE TABLE `garage` (
 
 *`UTF8` since latin1 is old school.
 
+*`ENGINE` on local InnoDB is perfectly fine but on cloud spatial index only works with MYISAM.
+
 ### PHP TASK
 
 `Main controller` has all the functionality that calls the garage table with given inputs.
