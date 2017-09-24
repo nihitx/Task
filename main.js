@@ -7,8 +7,8 @@ function AppViewModel() {
     self.callBackEnd = function (callNumber) {
         $.ajax({
                 type: 'GET',
-                url: BASEURL + 'index.php/Main/get_gerage_information/' + callNumber
-               
+                url: BASEURL + 'index.php/Main/get_gerage_information/' + callNumber,
+               contentType: 'application/json; charset=utf-8'
         })
         .done(function(data) {
           x =  JSON.stringify(data);
